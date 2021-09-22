@@ -13,7 +13,7 @@ namespace HOW_III
 {
 	public partial class Confirme : Form
 	{
-        private object dgConfirme;
+    
 
         public Confirme()
 		{

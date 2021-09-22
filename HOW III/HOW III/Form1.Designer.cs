@@ -45,19 +45,20 @@ namespace HOW_III
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbDataSet = new HOW_III.dbDataSet();
-            this.dbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgConfirme = new System.Windows.Forms.DataGridView();
             this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colcheck = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
+            this.dbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbDataSet = new HOW_III.dbDataSet();
+            ((System.ComponentModel.ISupportInitialize)(this.dgConfirme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.Info;
             this.dateTimePicker1.Location = new System.Drawing.Point(573, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(231, 20);
@@ -93,6 +94,8 @@ namespace HOW_III
             // 
             // tbDescricao
             // 
+            this.tbDescricao.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tbDescricao.ForeColor = System.Drawing.SystemColors.InfoText;
             this.tbDescricao.Location = new System.Drawing.Point(635, 70);
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(169, 20);
@@ -100,6 +103,8 @@ namespace HOW_III
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox2.Location = new System.Drawing.Point(635, 102);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(169, 20);
@@ -107,6 +112,8 @@ namespace HOW_III
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox3.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox3.Location = new System.Drawing.Point(635, 136);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(169, 20);
@@ -114,26 +121,32 @@ namespace HOW_III
             // 
             // tbGravar
             // 
+            this.tbGravar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbGravar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tbGravar.Location = new System.Drawing.Point(573, 346);
             this.tbGravar.Name = "tbGravar";
             this.tbGravar.Size = new System.Drawing.Size(75, 23);
             this.tbGravar.TabIndex = 7;
             this.tbGravar.Text = "Gravar";
-            this.tbGravar.UseVisualStyleBackColor = true;
+            this.tbGravar.UseVisualStyleBackColor = false;
             this.tbGravar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tbReset
             // 
+            this.tbReset.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tbReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tbReset.Location = new System.Drawing.Point(729, 346);
             this.tbReset.Name = "tbReset";
             this.tbReset.Size = new System.Drawing.Size(75, 23);
             this.tbReset.TabIndex = 8;
             this.tbReset.Text = "Reset";
-            this.tbReset.UseVisualStyleBackColor = true;
+            this.tbReset.UseVisualStyleBackColor = false;
             this.tbReset.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox4.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox4.Location = new System.Drawing.Point(635, 171);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(169, 20);
@@ -150,6 +163,8 @@ namespace HOW_III
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox5.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox5.Location = new System.Drawing.Point(635, 206);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(169, 20);
@@ -166,6 +181,8 @@ namespace HOW_III
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox6.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox6.Location = new System.Drawing.Point(635, 241);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(169, 20);
@@ -180,30 +197,21 @@ namespace HOW_III
             this.checkBox3.TabIndex = 14;
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgConfirme
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgConfirme.AutoGenerateColumns = false;
+            this.dgConfirme.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dgConfirme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgConfirme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Data,
             this.Descrição,
             this.colcheck});
-            this.dataGridView1.DataSource = this.dbDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(369, 385);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(696, 180);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dbDataSet
-            // 
-            this.dbDataSet.DataSetName = "dbDataSet";
-            this.dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbDataSetBindingSource
-            // 
-            this.dbDataSetBindingSource.DataSource = this.dbDataSet;
-            this.dbDataSetBindingSource.Position = 0;
+            this.dgConfirme.DataSource = this.dbDataSetBindingSource;
+            this.dgConfirme.Location = new System.Drawing.Point(369, 385);
+            this.dgConfirme.Name = "dgConfirme";
+            this.dgConfirme.Size = new System.Drawing.Size(696, 180);
+            this.dgConfirme.TabIndex = 15;
+            this.dgConfirme.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Data
             // 
@@ -222,12 +230,23 @@ namespace HOW_III
             this.colcheck.HeaderText = "colCheck";
             this.colcheck.Name = "colcheck";
             // 
+            // dbDataSetBindingSource
+            // 
+            this.dbDataSetBindingSource.DataSource = this.dbDataSet;
+            this.dbDataSetBindingSource.Position = 0;
+            // 
+            // dbDataSet
+            // 
+            this.dbDataSet.DataSetName = "dbDataSet";
+            this.dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Confirme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1441, 653);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgConfirme);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.checkBox2);
@@ -244,11 +263,11 @@ namespace HOW_III
             this.Controls.Add(this.tbTarefa1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Confirme";
-            this.Text = "Form1";
+            this.Text = "Lista de Tarefas";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgConfirme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +290,7 @@ namespace HOW_III
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgConfirme;
         private System.Windows.Forms.BindingSource dbDataSetBindingSource;
         private dbDataSet dbDataSet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data;
